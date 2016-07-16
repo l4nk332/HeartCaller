@@ -46,10 +46,23 @@ function topTwentyCities() {
       if (a.city > b.city) return 1;
       return 0;
     });
-    return (citiesSorted);
+    return citiesSorted;
+  });
+}
+
+function browseGenres() {
+  var liveStationGenreUrl = '/v2/content/liveStationGenres';
+  var countryCode = 'US';
+  var limit = 10000;
+  var url = `${apiBaseUrl}${liveStationGenreUrl}?$countryCode=${countryCode}&limit=${limit}`;
+
+  request.get(url, function(err, res, body) {
+    body = JSON.parse(body);
+    return body;
   });
 }
 
 module.exports = {
-  topTwentyCities : topTwentyCities
+  topTwentyCities : topTwentyCities,
+  browseGenres : browseGenres
 };
