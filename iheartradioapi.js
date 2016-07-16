@@ -36,19 +36,27 @@ router.get('/', function(req, res, next) {
     'El Paso'];
     var topTwentyCitiesArr = [];
     request(url, function(err, data) {
-    var dataArray = JSON.parse(data.body);
-    for (var i = 0; i < dataArray.hits.length; i++) {
-      if (topTwentyCitiesSeed.indexOf(dataArray.hits[i].city) !== -1) {
-        topTwentyCitiesArr.push(dataArray.hits[i]);
+      var dataArray = JSON.parse(data.body);
+      for (var i = 0; i < dataArray.hits.length; i++) {
+        if (topTwentyCitiesSeed.indexOf(dataArray.hits[i].city) !== -1) {
+          topTwentyCitiesArr.push(dataArray.hits[i]);
+        }
       }
-    }
-    var citiesSorted = topTwentyCitiesArr.sort(function(a, b) {
-      if (a.city < b.city) return -1;
-      if (a.city > b.city) return 1;
-      return 0;
+      var citiesSorted = topTwentyCitiesArr.sort(function(a, b) {
+        if (a.city < b.city) return -1;
+        if (a.city > b.city) return 1;
+        return 0;
+      });
+      var liveStationGenreUrl = '/v2/content/liveStationGenres';
+      var countryCode2 = 'US';
+      var limit2 = 10000;
+      var url2 = `${apiBaseUrl}${liveStationGenreUrl}?$countryCode=${countryCode}&limit=${limit2}`;
+
+      request(url2, function(err, res, body) {
+        body = JSON.parse(body);
+        res.render('browse', {cities:topTwentyCitiesArr});
+      });
     });
-    res.render('browse', {cities:topTwentyCitiesArr});
-  });
 });
 
 function browseGenres() {
@@ -59,7 +67,7 @@ function browseGenres() {
 
   request.get(url, function(err, res, body) {
     body = JSON.parse(body);
-    return body;
+    res.render('browse', {cities:topTwentyCitiesArr});
   });
 }
 
