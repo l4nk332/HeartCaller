@@ -407,4 +407,16 @@ button {
 	border: 0;
 	color: #df1e36;
 	cursor: pointer;
+	width: 100px;
+}
+
+.caller-list {
+	list-style-type: none;
+	padding: 0;
+}
+
+.caller-list {
+	font-size: 18px;
+	list-style-type: none;
+	padding: 0;
 }
