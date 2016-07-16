@@ -25,6 +25,14 @@ $(function() {
   $(".call-btn").on("click", function() {
     $(this).attr("disabled", true);
     $(".fixed-top").addClass("hide-alert");
-    socket.emit("call", socketId);
+    socket.emit("call", {
+      socketId: socketId,
+      username: $(".username").text()
+    });
+  });
+
+  $(".username").keypress(function(e) {
+    $(this).blur();
+    return e.which != 13;
   });
 });

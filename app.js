@@ -32,7 +32,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/live', live);
 app.get('/dj_interface', function(req, res) {
-  res.sendFile(path.join(__dirname + "/public/dj_interface.html"));
+  res.render(path.join("dj_interface"));
 });
 
 app.get('/browse', function(req, res) {
@@ -76,10 +76,11 @@ io.on('connection', function(socket) {
     }
   });
 
-  socket.on("call", function(socketId) {
-    let stationId = listeners[socketId];
+  socket.on("call", function(data) {
+    console.log(data);
+    let stationId = listeners[data.socketId];
     let djId = stations[stationId];
-    io.to(djId).emit("call", socketId);
+    io.to(djId).emit("call", data.username);
   });
 });
 

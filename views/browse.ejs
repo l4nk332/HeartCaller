@@ -32,6 +32,7 @@
       <img class="narrow-logo" src="/assets/images/iheartradio_logo_mobile.png">
     </div>
   	<hr class="logo-divider">
+    <div class="log-status"><h3>You will appear as <span class="username" contenteditable="true">Guest</span> to the station host.</h3></div>
   	<div class="station-container">
       <% stations.forEach(function(station){ %>
     		<div class="station" data-id="<%= station.id %>">
@@ -53,9 +54,9 @@
 
         </div>
         <div class="player-element player-controls">
-          <div class="player-control"><span class="control-backward glyphicon glyphicon-backward" aria-hidden="true"></span></div>
+          <!-- <div class="player-control"><span class="control-backward glyphicon glyphicon-backward" aria-hidden="true"></span></div> -->
           <div class="player-control play-btn"><span class="control-play glyphicon glyphicon-pause" aria-hidden="true"></span></div>
-          <div class="player-control"><span class="control-forward glyphicon glyphicon-forward" aria-hidden="true"></span></div>
+          <!-- <div class="player-control"><span class="control-forward glyphicon glyphicon-forward" aria-hidden="true"></span></div> -->
         </div>
       </div>
     </div>

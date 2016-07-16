@@ -7,8 +7,14 @@ $(function() {
     stationId: stationId
   });
 
-  socket.on("call", function(listenerId) {
-    $(".caller-list").append(`<li>${listenerId}</li>`);
+  let isEmpty = true;
+
+  socket.on("call", function(username) {
+    if (isEmpty) {
+      $(".caller-status").text("Callers waiting...");
+      isEmpty = false;
+    }
+    $(".caller-list").append(`<li>${username}</li>`);
   });
 
   $(".start-btn").on("click", function() {
@@ -17,6 +23,8 @@ $(function() {
         stationId: stationId
       });
     } else {
+      $(".caller-status").text("No callers yet.");
+      $(".caller-list").html("");
       socket.emit("line-close", {
         stationId: stationId
       });
