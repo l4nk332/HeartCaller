@@ -26,10 +26,12 @@ $(function() {
     $(this).attr("disabled", true);
     $(".fixed-top").addClass("hide-alert");
     var songRequest = prompt("What song would you like to hear next?");
-    socket.emit("call", {
-      socketId: socketId,
-      username: $(".username").text(),
-      songRequest: songRequest
-    });
+    if (songRequest !== null && songRequest.length !== 0) {
+      socket.emit("call", {
+        socketId: socketId,
+        username: $(".username").val(),
+        songRequest: songRequest
+      });
+    }
   });
 });
