@@ -6,4 +6,5 @@ npm-debug.log
 .gitignore
 .DS_Store
 .env
+.c9
 >>>>>>> a7da865111d9dcd3efd78e11bd4c8dbd4dd87394

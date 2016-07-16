@@ -29,9 +29,9 @@ router.get('/genre/:id', function(req, res, next) {
       obj.stream = key.streams.hls_stream;
       if (obj.website) {
         if (obj.website.indexOf('www') > -1) {
-          obj.website = "http://" + obj.website;
+          obj.website = "https://" + obj.website;
         } else {
-          obj.website = "http://www." + obj.website;
+          obj.website = "https://www." + obj.website;
         }
       }
       newArray.push(obj);
@@ -69,9 +69,9 @@ router.get('/city/:id', function(req, res, next) {
       obj.stream = key.streams.hls_stream;
       if (obj.website) {
         if (obj.website.indexOf('www') > -1) {
-          obj.website = "http://" + obj.website;
+          obj.website = "https://" + obj.website;
         } else {
-          obj.website = "http://www." + obj.website;
+          obj.website = "https://www." + obj.website;
         }
       }
       newArray.push(obj);
