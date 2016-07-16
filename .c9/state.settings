@@ -41,7 +41,8 @@
                     "name": "tab1",
                     "path": "",
                     "className": [
-                        "tab1"
+                        "tab1",
+                        "focus"
                     ],
                     "document": {
                         "changed": false,
@@ -54,7 +55,7 @@
                         "terminal": {
                             "id": "devel_828",
                             "cwd": "",
-                            "width": 1631,
+                            "width": 1247,
                             "height": 342
                         }
                     },
@@ -98,16 +99,16 @@
             "@ace": 1,
             "@acestatus": 1,
             "@divider": 4,
-            "@document": 6,
+            "@document": 20,
             "@form": 5,
             "@menu": 5,
             "@menuitem": 13,
             "@pane": 2,
             "@postmessage": 1,
             "@preview": 1,
-            "@session": 5,
-            "@tab": 6,
-            "@undoManager": 6,
+            "@session": 19,
+            "@tab": 13,
+            "@undoManager": 20,
             "@welcome": 1
         }
     },
@@ -126,8 +127,8 @@
     },
     "panecycle": {
         "json()": [
-            "tab5",
-            "tab1"
+            "tab1",
+            "tab12"
         ]
     },
     "panels": {
@@ -164,8 +165,11 @@
         "expanded": {
             "json()": [
                 "/",
+                "/bin",
                 "/routes",
-                "/views"
+                "/public",
+                "/lib",
+                "/public/js"
             ]
         }
     },
@@ -198,12 +202,18 @@
     },
     "tabs": {
         "json()": {
-            "focus": "/views/error.ejs",
+            "focus": "/package.json",
             "meta": {
                 "accessList": [
+                    "tab12",
+                    "tab6",
                     "tab5",
                     "tab4",
+                    "tab11",
+                    "tab9",
+                    "tab10",
                     "tab0",
+                    "tab7",
                     "tab3"
                 ]
             },
@@ -219,7 +229,7 @@
                     "document": {
                         "changed": false,
                         "meta": {
-                            "timestamp": 1468670323807
+                            "timestamp": 1468675493186
                         },
                         "filter": true,
                         "title": "app.js",
@@ -232,14 +242,115 @@
                 {
                     "type": "tab",
                     "name": "tab3",
-                    "path": "/routes/live.js",
+                    "path": "/bin/www",
                     "className": [
                         "tab3"
                     ],
                     "document": {
                         "changed": false,
                         "meta": {
-                            "timestamp": 1468670581372
+                            "timestamp": 1468670334559
+                        },
+                        "filter": true,
+                        "title": "www",
+                        "tooltip": "/bin/www",
+                        "ace": {}
+                    },
+                    "editorType": "ace",
+                    "active": false
+                },
+                {
+                    "type": "tab",
+                    "name": "tab4",
+                    "path": "/public/js/djsockets.js",
+                    "className": [
+                        "tab4"
+                    ],
+                    "document": {
+                        "changed": false,
+                        "meta": {
+                            "timestamp": 1468674958711
+                        },
+                        "filter": true,
+                        "title": "djsockets.js",
+                        "tooltip": "/public/js/djsockets.js",
+                        "ace": {}
+                    },
+                    "editorType": "ace",
+                    "active": false
+                },
+                {
+                    "type": "tab",
+                    "name": "tab5",
+                    "path": "/public/js/index.js",
+                    "className": [
+                        "tab5"
+                    ],
+                    "document": {
+                        "changed": false,
+                        "meta": {
+                            "timestamp": 1468674958711
+                        },
+                        "filter": true,
+                        "title": "index.js",
+                        "tooltip": "/public/js/index.js",
+                        "ace": {}
+                    },
+                    "editorType": "ace",
+                    "active": false
+                },
+                {
+                    "type": "tab",
+                    "name": "tab6",
+                    "path": "/public/js/listenersockets.js",
+                    "className": [
+                        "tab6"
+                    ],
+                    "document": {
+                        "changed": false,
+                        "meta": {
+                            "timestamp": 1468674958711
+                        },
+                        "filter": true,
+                        "title": "listenersockets.js",
+                        "tooltip": "/public/js/listenersockets.js",
+                        "ace": {}
+                    },
+                    "editorType": "ace",
+                    "active": false
+                },
+                {
+                    "type": "tab",
+                    "name": "tab7",
+                    "path": "/lib/helper.js",
+                    "className": [
+                        "tab7"
+                    ],
+                    "document": {
+                        "changed": false,
+                        "meta": {
+                            "timestamp": 1468674958707
+                        },
+                        "filter": true,
+                        "title": "helper.js",
+                        "tooltip": "/lib/helper.js",
+                        "ace": {}
+                    },
+                    "editorType": "ace",
+                    "active": false
+                },
+                {
+                    "type": "tab",
+                    "name": "tab9",
+                    "path": "/routes/live.js",
+                    "className": [
+                        "tab9",
+                        "changed"
+                    ],
+                    "document": {
+                        "changed": true,
+                        "meta": {
+                            "timestamp": 1468674958711
                         },
                         "filter": true,
                         "title": "live.js",
@@ -251,19 +362,19 @@
                 },
                 {
                     "type": "tab",
-                    "name": "tab4",
-                    "path": "/views/index.ejs",
+                    "name": "tab10",
+                    "path": "/routes/users.js",
                     "className": [
-                        "tab4"
+                        "tab10"
                     ],
                     "document": {
                         "changed": false,
                         "meta": {
-                            "timestamp": 1468670323811
+                            "timestamp": 1468670323807
                         },
                         "filter": true,
-                        "title": "index.ejs",
-                        "tooltip": "/views/index.ejs",
+                        "title": "users.js",
+                        "tooltip": "/routes/users.js",
                         "ace": {}
                     },
                     "editorType": "ace",
@@ -271,20 +382,40 @@
                 },
                 {
                     "type": "tab",
-                    "name": "tab5",
-                    "path": "/views/error.ejs",
+                    "name": "tab11",
+                    "path": "/public/dj_interface.html",
                     "className": [
-                        "tab5",
+                        "tab11"
+                    ],
+                    "document": {
+                        "changed": false,
+                        "meta": {
+                            "timestamp": 1468676298305
+                        },
+                        "filter": true,
+                        "title": "dj_interface.html",
+                        "tooltip": "/public/dj_interface.html",
+                        "ace": {}
+                    },
+                    "editorType": "ace",
+                    "active": false
+                },
+                {
+                    "type": "tab",
+                    "name": "tab12",
+                    "path": "/package.json",
+                    "className": [
+                        "tab12",
                         "focus"
                     ],
                     "document": {
                         "changed": false,
                         "meta": {
-                            "timestamp": 1468670323811
+                            "timestamp": 1468674958707
                         },
                         "filter": true,
-                        "title": "error.ejs",
-                        "tooltip": "/views/error.ejs",
+                        "title": "package.json",
+                        "tooltip": "/package.json",
                         "ace": {}
                     },
                     "editorType": "ace",
@@ -298,7 +429,7 @@
     },
     "tree_selection": {
         "json()": [
-            "/views"
+            "/iheartradioapi.js"
         ]
     }
 }
