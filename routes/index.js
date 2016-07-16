@@ -8,11 +8,13 @@ var apiBaseUrl = 'https://us.api.iheart.com/api';
 var liveStationBrowseUrl = '/api/v2/content/liveStations';
 
 var browseMarketUrl = '/v2/content/markets';
+var liveStationGenreUrl = '/v2/content/liveStationGenres';
 
 router.get('/', function(req, res, next){
   var countryCode = 'US';
   var resultsLimit = 10000;
   var url = `${apiBaseUrl}${browseMarketUrl}?${countryCode}&limit=${resultsLimit}`;
+  var genreFullUrl = `${apiBaseUrl}${liveStationGenreUrl}?$countryCode=${countryCode}&limit=${resultsLimit}`;
   var topTwentyCitiesSeed = ['New York',
                          'Los Angeles',
                          'Chicago',
@@ -34,6 +36,7 @@ router.get('/', function(req, res, next){
                          'Denver',
                          'El Paso'];
   var topTwentyCitiesArr = [];
+  var citiesSorted;
   request(`${url}`, function(err, data){
     var results = JSON.parse(data.body);
     // console.log(results);
@@ -47,8 +50,12 @@ router.get('/', function(req, res, next){
       if (a.city > b.city) return 1;
       return 0;
     });
+
     res.render('index', {cities: citiesSorted});
+
+    // res.send('index', {cities: citiesSorted});
   });
+  // res.render('index', {cities: citiesSorted});
 });
 
 module.exports = router;

@@ -97,9 +97,9 @@ function browseGenres() {
   var liveStationGenreUrl = '/v2/content/liveStationGenres';
   var countryCode = 'US';
   var limit = 10000;
-  var url = `${apiBaseUrl}${liveStationGenreUrl}?$countryCode=${countryCode}&limit=${limit}`;
+  var genreFullUrl = `${apiBaseUrl}${liveStationGenreUrl}?$countryCode=${countryCode}&limit=${limit}`;
 
-  request.get(url, function(err, res, body) {
+  request.get(genreFullUrl, function(err, res, body) {
     body = JSON.parse(body);
     return body;
   });
