@@ -11,6 +11,7 @@ $(".station").on("click", function() {
     success: function(data) {
       var station = data.hits[0];
       $('.station-name').html(station.name);
+      $(".alert-text").text(`${station.name} is ready to take requests!`)
       if (station.freq === '0.0' || station.freq === '0' || station.freq === undefined) {
         $('.station-freq').html('Online Station');
       } else {
@@ -53,7 +54,7 @@ $(".play-btn").on("click", function() {
 
 $(".start-btn").on("click", function() {
   $(this).toggleClass("stop-receiving");
-  var buttonText = $(this).text() === "Start taking calls" ? "Stop receiving calls" : "Start taking calls";
+  var buttonText = $(this).text() === "Start taking requests" ? "Stop taking requests" : "Start taking requests";
   $(this).text(buttonText);
   if ($(".dj-container").css("display") === "none") {
     $(".dj-container").css("display", "flex");

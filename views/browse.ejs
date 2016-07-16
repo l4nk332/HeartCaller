@@ -15,10 +15,10 @@
     <div class="hide-alert fixed-top">
       <div class="alert-container">
         <div class="alert-element alert-message">
-          <p class="alert-text">IHeart80s 103.7 is ready to take phone calls!</p>
+          <p class="alert-text"></p>
         </div>
         <div class="alert-element call-container">
-          <button class="call-btn" type="button"><span class="call-logo control-backward glyphicon glyphicon-earphone" aria-hidden="true"></span></button>
+          <button class="call-btn" type="button"><span class="call-logo control-backward glyphicon glyphicon-music" aria-hidden="true"></span></button>
         </div>
         <div class="alert-element dismiss-container">
           <p class="dismiss-alert">X</p>
@@ -32,7 +32,7 @@
       <img class="narrow-logo" src="/assets/images/iheartradio_logo_mobile.png">
     </div>
   	<hr class="logo-divider">
-    <div class="log-status"><h3>You will appear as <span class="username" contenteditable="true">Guest</span> to the station host.</h3></div>
+    <div class="log-status"><h3>You will appear as <input type="text" class="username" value='Guest'></h3></div>
   	<div class="station-container">
       <% stations.forEach(function(station){ %>
     		<div class="station" data-id="<%= station.id %>">

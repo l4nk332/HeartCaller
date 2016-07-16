@@ -9,12 +9,12 @@ $(function() {
 
   var isEmpty = true;
 
-  socket.on("call", function(username) {
+  socket.on("call", function(data) {
     if (isEmpty) {
-      $(".caller-status").text("Callers waiting...");
+      $(".caller-status").text("Requests pending...");
       isEmpty = false;
     }
-    $(".caller-list").append(`<li>${username}</li>`);
+    $(".caller-list").append(`<li><strong>${data.username}</strong> requested <em>${data.songRequest}</em></li>`);
   });
 
   $(".start-btn").on("click", function() {
@@ -23,7 +23,7 @@ $(function() {
         stationId: stationId
       });
     } else {
-      $(".caller-status").text("No callers yet.");
+      $(".caller-status").text("No requests yet.");
       $(".caller-list").html("");
       socket.emit("line-close", {
         stationId: stationId
