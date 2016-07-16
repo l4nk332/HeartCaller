@@ -4,12 +4,8 @@ var router = express.Router();
 var request = require('request');
 var splice = require('../lib/helper.js');
 
-var a = 'some string';
-a.splice(4,0,'asdfasdfa');
-
 /* GET home page. */
 router.get('/genre/:id', function(req, res, next) {
-  console.log(a.splice(4,0,'s'))
   var id = req.params.id;
   request(`https://us.api.iheart.com/api/v2/content/liveStations?countryCode=US&limit=10&genreId=${id}`, function(err,data) {
     var dataArray = JSON.parse(data.body).hits;
