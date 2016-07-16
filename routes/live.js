@@ -2,6 +2,7 @@
 var express = require('express');
 var router = express.Router();
 var request = require('request');
+var splice = require('../lib/helper.js');
 
 /* GET home page. */
 router.get('/genre/:id', function(req, res, next) {
@@ -24,7 +25,7 @@ router.get('/genre/:id', function(req, res, next) {
       } else {
         obj.location = `${key.markets[0].city}, ${key.markets[0].stateAbbreviation}`;
       }
-      obj.logo = key.logo;
+      obj.logo = key.logo.splice(4,0,'s');
       obj.website = key.website;
       obj.stream = key.streams.hls_stream;
       if (obj.website) {
@@ -64,7 +65,8 @@ router.get('/city/:id', function(req, res, next) {
       } else {
         obj.location = `${key.markets[0].city}, ${key.markets[0].stateAbbreviation}`;
       }
-      obj.logo = key.logo;
+
+      obj.logo = key.logo.splice(4,0,'s');
       obj.website = key.website;
       obj.stream = key.streams.hls_stream;
       if (obj.website) {
