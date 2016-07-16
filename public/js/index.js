@@ -17,7 +17,13 @@ $(".station").on("click", function() {
       for (var keys in streams) {
         streamArray.push(streams[keys]);
       }
-      $('.audio-source').attr('src', `${streamArray[0]}`);
+      if (streamArray[0] === '') {
+        $('.no-stream').attr('hidden', false);
+        $('.audio-source').attr('src', '');
+      } else {
+        $('.audio-source').attr('src', `${streamArray[0]}`);
+        $('.no-stream').attr('hidden', true);
+      }
       $('.aud').attr('autoplay', true);
       $('.aud').load();
     }
