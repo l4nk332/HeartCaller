@@ -1,7 +1,31 @@
 {
+    "ace": {
+        "search": {
+            "@backwards": "false",
+            "@highlightmatches": "true",
+            "@matchcase": "false",
+            "@preservecase": "false",
+            "@regex": "false",
+            "@wholeword": "false",
+            "@wraparound": "true"
+        }
+    },
+    "breakpoints": {
+        "json()": [
+            {
+                "path": "/ewebrtc-sdk/node-sample/public/views/login.html",
+                "line": 1,
+                "column": 2,
+                "text": "login.html",
+                "content": "  <p>",
+                "time": 1468658269011,
+                "enabled": true
+            }
+        ]
+    },
     "console": {
         "@expanded": true,
-        "@height": 495,
+        "@height": 368,
         "@maximized": "false",
         "json()": {
             "meta": {
@@ -26,13 +50,13 @@
                             "timestamp": 1468630279833
                         },
                         "filter": true,
-                        "title": "bash - \"4196848580b6\"",
-                        "tooltip": "bash - \"4196848580b6\"",
+                        "title": "bash - \"2e552f484bac\"",
+                        "tooltip": "bash - \"2e552f484bac\"",
                         "terminal": {
                             "id": "devel_828",
                             "cwd": "",
-                            "width": 1648,
-                            "height": 469
+                            "width": 1487,
+                            "height": 342
                         }
                     },
                     "editorType": "terminal",
@@ -45,11 +69,9 @@
                     "className": [],
                     "document": {
                         "title": "Immediate",
-                        "changed": false,
-                        "meta": {
-                            "timestamp": 1468630279834
-                        },
-                        "filter": true
+                        "meta": {},
+                        "filter": true,
+                        "changed": false
                     },
                     "editorType": "immediate",
                     "active": false
@@ -77,14 +99,16 @@
             "@ace": 1,
             "@acestatus": 1,
             "@divider": 4,
-            "@document": 4,
-            "@form": 6,
+            "@document": 44,
+            "@form": 5,
             "@menu": 5,
             "@menuitem": 13,
             "@pane": 2,
-            "@session": 3,
-            "@tab": 4,
-            "@undoManager": 4,
+            "@postmessage": 1,
+            "@preview": 1,
+            "@session": 43,
+            "@tab": 26,
+            "@undoManager": 44,
             "@welcome": 1
         }
     },
@@ -103,12 +127,12 @@
     },
     "panecycle": {
         "json()": [
-            "tab1",
-            "tab3"
+            "tab1"
         ]
     },
     "panels": {
         "@active-left": "tree",
+        "@width-left": 361,
         "commands.panel": {
             "@enabled": "true",
             "@name": "commands.panel"
@@ -135,45 +159,62 @@
         }
     },
     "projecttree": {
+        "@scrollpos": -10,
         "@showfs": true,
         "expanded": {
             "json()": [
-                "/"
+                "/",
+                "/ewebrtc-dhs-restify/public/js/docs/public",
+                "/ewebrtc-dhs-restify/public",
+                "/ewebrtc-dhs-restify/public/js/docs",
+                "/ewebrtc-dhs-restify/public/js",
+                "/ewebrtc-sdk",
+                "/ewebrtc-sdk/node-sample/node_modules/att-dhs/js",
+                "/ewebrtc-sdk/node-sample",
+                "/ewebrtc-sdk/node-sample/public",
+                "/ewebrtc-sdk/node-sample/public/js",
+                "/ewebrtc-sdk/node-sample/public/js/vendor"
+            ]
+        }
+    },
+    "recentfiles": {
+        "json()": []
+    },
+    "search-history": {
+        "search": {
+            "json()": [
+                "createAccessToken();",
+                "onStartLoginClick()",
+                "for URL for a OAu",
+                "onStartLoginClick()",
+                "server",
+                "server.address()",
+                "tokens",
+                "virtual",
+                "server.address().address",
+                "ws",
+                "9001",
+                "var localstorage",
+                "index.hjs",
+                "9000",
+                "900",
+                "9001",
+                ":9001",
+                "config"
             ]
         }
     },
     "tabs": {
         "json()": {
-            "focus": "/README.md",
+            "focus": "tab1",
             "meta": {
                 "accessList": [
-                    "tab3"
+                    "tab23",
+                    "tab22"
                 ]
             },
             "name": "pane0",
-            "nodes": [
-                {
-                    "type": "tab",
-                    "name": "tab3",
-                    "path": "/README.md",
-                    "className": [
-                        "tab3",
-                        "focus"
-                    ],
-                    "document": {
-                        "changed": false,
-                        "meta": {
-                            "timestamp": 1468629306168
-                        },
-                        "filter": true,
-                        "title": "README.md",
-                        "tooltip": "/README.md",
-                        "ace": {}
-                    },
-                    "editorType": "ace",
-                    "active": true
-                }
-            ],
+            "nodes": [],
             "skin": "editor_tab",
             "skinset": "default",
             "type": "pane"
@@ -181,7 +222,7 @@
     },
     "tree_selection": {
         "json()": [
-            "/README.md"
+            "/app.js"
         ]
     }
 }
