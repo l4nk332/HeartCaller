@@ -7,8 +7,14 @@ $(function() {
     stationId: stationId
   });
 
-  socket.on("call", function(listenerId) {
-    $(".caller-list").append(`<li>${listenerId}</li>`);
+  var isEmpty = true;
+
+  socket.on("call", function(data) {
+    if (isEmpty) {
+      $(".caller-status").text("Requests pending...");
+      isEmpty = false;
+    }
+    $(".caller-list").append(`<li><strong>${data.username}</strong> requested <em>${data.songRequest}</em></li>`);
   });
 
   $(".start-btn").on("click", function() {
@@ -17,6 +23,8 @@ $(function() {
         stationId: stationId
       });
     } else {
+      $(".caller-status").text("No requests yet.");
+      $(".caller-list").html("");
       socket.emit("line-close", {
         stationId: stationId
       });

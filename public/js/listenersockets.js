@@ -25,6 +25,11 @@ $(function() {
   $(".call-btn").on("click", function() {
     $(this).attr("disabled", true);
     $(".fixed-top").addClass("hide-alert");
-    socket.emit("call", socketId);
+    var songRequest = prompt("What song would you like to hear next?");
+    socket.emit("call", {
+      socketId: socketId,
+      username: $(".username").text(),
+      songRequest: songRequest
+    });
   });
 });

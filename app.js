@@ -76,10 +76,13 @@ io.on('connection', function(socket) {
     }
   });
 
-  socket.on("call", function(socketId) {
-    let stationId = listeners[socketId];
+  socket.on("call", function(data) {
+    let stationId = listeners[data.socketId];
     let djId = stations[stationId];
-    io.to(djId).emit("call", socketId);
+    io.to(djId).emit("call", {
+      username: data.username,
+      songRequest: data.songRequest
+    });
   });
 });
 

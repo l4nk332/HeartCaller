@@ -396,3 +396,27 @@ button {
   height: 75px;
   width: 200px;
 }
+
+.log-status {
+	color: #fff;
+	text-align: center;
+}
+
+.username {
+	background-color: rgba(0, 0, 0, 0);
+	border: 0;
+	color: #df1e36;
+	cursor: pointer;
+	width: 100px;
+}
+
+.caller-list {
+	list-style-type: none;
+	padding: 0;
+}
+
+.caller-list {
+	font-size: 18px;
+	list-style-type: none;
+	padding: 0;
+}

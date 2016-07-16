@@ -1,3 +1,7 @@
+String.prototype.splice = function(idx, rem, str) {
+    return this.slice(0, idx) + str + this.slice(idx + Math.abs(rem));
+};
+
 $(".station").on("click", function() {
   $(".fixed-bottom").removeClass("hide-player");
   var stationID = ($(this).attr('data-id'));
@@ -7,12 +11,14 @@ $(".station").on("click", function() {
     success: function(data) {
       var station = data.hits[0];
       $('.station-name').html(station.name);
+      $(".alert-text").text(`${station.name} is ready to take requests!`)
       if (station.freq === '0.0' || station.freq === '0' || station.freq === undefined) {
         $('.station-freq').html('Online Station');
       } else {
         $('.station-freq').html(`${station.freq} ${station.band}`);
       }
-      $('.player-img').attr('src', `${station.logo}`);
+      var logo = station.logo.splice(4,0,'s');
+      $('.player-img').attr('src', `${logo}`);
       $(".control-play").removeClass("glyphicon-play").addClass("glyphicon-pause");
       var streams = station.streams;
       var streamArray = [];
@@ -48,7 +54,7 @@ $(".play-btn").on("click", function() {
 
 $(".start-btn").on("click", function() {
   $(this).toggleClass("stop-receiving");
-  var buttonText = $(this).text() === "Start taking calls" ? "Stop receiving calls" : "Start taking calls";
+  var buttonText = $(this).text() === "Start taking requests" ? "Stop taking requests" : "Start taking requests";
   $(this).text(buttonText);
   if ($(".dj-container").css("display") === "none") {
     $(".dj-container").css("display", "flex");
