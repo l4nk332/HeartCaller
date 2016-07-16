@@ -1,11 +1,67 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>At&amp;t Hackathon Listener Page</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+  	<div class="iheart-radio-logo">
+  		<img class="wide-logo" src="http://img.ccrd.clearchannel.com/media/mlib/977/2015/12/default/iheartradio_logo_05_nobg_0_1449143668.png">
+  		<img class="narrow-logo" src="http://www.strata-gee.com/wp-content/uploads/2015/07/iHeartRadio_Logo-RS.png">
+  	</div>
+  	<hr class="logo-divider">
+    <div class="panel-selection-container">
+		    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne">
+              <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  City
+                </a>
+              </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+              <div class="panel-body">
+                <ul class="selection-list">
+                  <% cities.forEach(function(city) { %>
+                    <a><li><%= city.city %></li></a>
+                  <% }) %>
+        		    </ul>
+              </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="headingTwo">
+            <h4 class="panel-title">
+              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Genre
+              </a>
+            </h4>
+          </div>
+          <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+            <div class="panel-body">
+              <ul class="selection-list">
+          			<a><li>San Francisco</li></a>
+          			<a><li>San Francisco</li></a>
+          			<a><li>San Francisco</li></a>
+          			<a><li>San Francisco</li></a>
+          			<a><li>San Francisco</li></a>
+          			<a><li>San Francisco</li></a>
+          			<a><li>San Francisco</li></a>
+          			<a><li>San Francisco</li></a>
+		          </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+	  </div>
+    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
+    <script src="/js/index.js"></script>
   </body>
 </html>
