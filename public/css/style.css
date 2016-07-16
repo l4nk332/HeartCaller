@@ -397,3 +397,15 @@ button {
   height: 75px;
   width: 200px;
 }
+
+.log-status {
+	color: #fff;
+	text-align: center;
+}
+
+.username {
+	background-color: rgba(0, 0, 0, 0);
+	border: 0;
+	color: #df1e36;
+	cursor: pointer;
+}
