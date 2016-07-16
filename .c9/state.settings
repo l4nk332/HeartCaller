@@ -1,0 +1,435 @@
+{
+    "ace": {
+        "search": {
+            "@backwards": "false",
+            "@highlightmatches": "true",
+            "@matchcase": "false",
+            "@preservecase": "false",
+            "@regex": "false",
+            "@wholeword": "false",
+            "@wraparound": "true"
+        }
+    },
+    "breakpoints": {
+        "json()": [
+            {
+                "path": "/ewebrtc-sdk/node-sample/public/views/login.html",
+                "line": 1,
+                "column": 2,
+                "text": "login.html",
+                "content": "  <p>",
+                "time": 1468658269011,
+                "enabled": true
+            }
+        ]
+    },
+    "console": {
+        "@expanded": true,
+        "@height": 368,
+        "@maximized": "false",
+        "json()": {
+            "meta": {
+                "accessList": [
+                    "tab1",
+                    "tab2"
+                ]
+            },
+            "name": "pane1",
+            "nodes": [
+                {
+                    "type": "tab",
+                    "name": "tab1",
+                    "path": "",
+                    "className": [
+                        "tab1",
+                        "focus"
+                    ],
+                    "document": {
+                        "changed": false,
+                        "meta": {
+                            "timestamp": 1468630279833
+                        },
+                        "filter": true,
+                        "title": "bash - \"2e552f484bac\"",
+                        "tooltip": "bash - \"2e552f484bac\"",
+                        "terminal": {
+                            "id": "devel_828",
+                            "cwd": "",
+                            "width": 1247,
+                            "height": 342
+                        }
+                    },
+                    "editorType": "terminal",
+                    "active": true
+                },
+                {
+                    "type": "tab",
+                    "name": "tab2",
+                    "path": "",
+                    "className": [],
+                    "document": {
+                        "title": "Immediate",
+                        "meta": {},
+                        "filter": true,
+                        "changed": false
+                    },
+                    "editorType": "immediate",
+                    "active": false
+                }
+            ],
+            "skin": "editor_tab",
+            "skinset": "default",
+            "type": "pane"
+        }
+    },
+    "experiments": {
+        "@@enabled": true,
+        "@autosave": 0,
+        "@flat-dark": 0,
+        "@git": 1,
+        "@go_completion": 0,
+        "@mount": 0,
+        "@plugin-manager": 1,
+        "@plugins": 0,
+        "@sdk": 0,
+        "@test": 0
+    },
+    "ext": {
+        "counters": {
+            "@ace": 1,
+            "@acestatus": 1,
+            "@divider": 4,
+            "@document": 20,
+            "@form": 5,
+            "@menu": 5,
+            "@menuitem": 13,
+            "@pane": 2,
+            "@postmessage": 1,
+            "@preview": 1,
+            "@session": 19,
+            "@tab": 13,
+            "@undoManager": 20,
+            "@welcome": 1
+        }
+    },
+    "findinfiles": {
+        "@console": "true",
+        "@matchcase": "false",
+        "@regex": "false",
+        "@scope": "selection",
+        "@wholeword": "false"
+    },
+    "menus": {
+        "@minimized": "false"
+    },
+    "nak": {
+        "@installed": true
+    },
+    "panecycle": {
+        "json()": [
+            "tab1",
+            "tab12"
+        ]
+    },
+    "panels": {
+        "@active-left": "tree",
+        "@width-left": 217,
+        "commands.panel": {
+            "@enabled": "true",
+            "@name": "commands.panel"
+        },
+        "debugger": {
+            "@enabled": "true",
+            "@name": "debugger"
+        },
+        "navigate": {
+            "@enabled": "true",
+            "@name": "navigate"
+        },
+        "outline": {
+            "@enabled": "true",
+            "@name": "outline"
+        },
+        "scm": {
+            "@enabled": "true",
+            "@name": "scm"
+        },
+        "tree": {
+            "@enabled": "true",
+            "@name": "tree"
+        }
+    },
+    "projecttree": {
+        "@scrollpos": -10,
+        "@showfs": true,
+        "expanded": {
+            "json()": [
+                "/",
+                "/bin",
+                "/routes",
+                "/public",
+                "/lib",
+                "/public/js"
+            ]
+        }
+    },
+    "recentfiles": {
+        "json()": []
+    },
+    "search-history": {
+        "search": {
+            "json()": [
+                "createAccessToken();",
+                "onStartLoginClick()",
+                "for URL for a OAu",
+                "onStartLoginClick()",
+                "server",
+                "server.address()",
+                "tokens",
+                "virtual",
+                "server.address().address",
+                "ws",
+                "9001",
+                "var localstorage",
+                "index.hjs",
+                "9000",
+                "900",
+                "9001",
+                ":9001",
+                "config"
+            ]
+        }
+    },
+    "tabs": {
+        "json()": {
+            "focus": "/package.json",
+            "meta": {
+                "accessList": [
+                    "tab12",
+                    "tab6",
+                    "tab5",
+                    "tab4",
+                    "tab11",
+                    "tab9",
+                    "tab10",
+                    "tab0",
+                    "tab7",
+                    "tab3"
+                ]
+            },
+            "name": "pane0",
+            "nodes": [
+                {
+                    "type": "tab",
+                    "name": "tab0",
+                    "path": "/app.js",
+                    "className": [
+                        "tab0"
+                    ],
+                    "document": {
+                        "changed": false,
+                        "meta": {
+                            "timestamp": 1468675493186
+                        },
+                        "filter": true,
+                        "title": "app.js",
+                        "tooltip": "/app.js",
+                        "ace": {}
+                    },
+                    "editorType": "ace",
+                    "active": false
+                },
+                {
+                    "type": "tab",
+                    "name": "tab3",
+                    "path": "/bin/www",
+                    "className": [
+                        "tab3"
+                    ],
+                    "document": {
+                        "changed": false,
+                        "meta": {
+                            "timestamp": 1468670334559
+                        },
+                        "filter": true,
+                        "title": "www",
+                        "tooltip": "/bin/www",
+                        "ace": {}
+                    },
+                    "editorType": "ace",
+                    "active": false
+                },
+                {
+                    "type": "tab",
+                    "name": "tab4",
+                    "path": "/public/js/djsockets.js",
+                    "className": [
+                        "tab4"
+                    ],
+                    "document": {
+                        "changed": false,
+                        "meta": {
+                            "timestamp": 1468674958711
+                        },
+                        "filter": true,
+                        "title": "djsockets.js",
+                        "tooltip": "/public/js/djsockets.js",
+                        "ace": {}
+                    },
+                    "editorType": "ace",
+                    "active": false
+                },
+                {
+                    "type": "tab",
+                    "name": "tab5",
+                    "path": "/public/js/index.js",
+                    "className": [
+                        "tab5"
+                    ],
+                    "document": {
+                        "changed": false,
+                        "meta": {
+                            "timestamp": 1468674958711
+                        },
+                        "filter": true,
+                        "title": "index.js",
+                        "tooltip": "/public/js/index.js",
+                        "ace": {}
+                    },
+                    "editorType": "ace",
+                    "active": false
+                },
+                {
+                    "type": "tab",
+                    "name": "tab6",
+                    "path": "/public/js/listenersockets.js",
+                    "className": [
+                        "tab6"
+                    ],
+                    "document": {
+                        "changed": false,
+                        "meta": {
+                            "timestamp": 1468674958711
+                        },
+                        "filter": true,
+                        "title": "listenersockets.js",
+                        "tooltip": "/public/js/listenersockets.js",
+                        "ace": {}
+                    },
+                    "editorType": "ace",
+                    "active": false
+                },
+                {
+                    "type": "tab",
+                    "name": "tab7",
+                    "path": "/lib/helper.js",
+                    "className": [
+                        "tab7"
+                    ],
+                    "document": {
+                        "changed": false,
+                        "meta": {
+                            "timestamp": 1468674958707
+                        },
+                        "filter": true,
+                        "title": "helper.js",
+                        "tooltip": "/lib/helper.js",
+                        "ace": {}
+                    },
+                    "editorType": "ace",
+                    "active": false
+                },
+                {
+                    "type": "tab",
+                    "name": "tab9",
+                    "path": "/routes/live.js",
+                    "className": [
+                        "tab9",
+                        "changed"
+                    ],
+                    "document": {
+                        "changed": true,
+                        "meta": {
+                            "timestamp": 1468674958711
+                        },
+                        "filter": true,
+                        "title": "live.js",
+                        "tooltip": "/routes/live.js",
+                        "ace": {}
+                    },
+                    "editorType": "ace",
+                    "active": false
+                },
+                {
+                    "type": "tab",
+                    "name": "tab10",
+                    "path": "/routes/users.js",
+                    "className": [
+                        "tab10"
+                    ],
+                    "document": {
+                        "changed": false,
+                        "meta": {
+                            "timestamp": 1468670323807
+                        },
+                        "filter": true,
+                        "title": "users.js",
+                        "tooltip": "/routes/users.js",
+                        "ace": {}
+                    },
+                    "editorType": "ace",
+                    "active": false
+                },
+                {
+                    "type": "tab",
+                    "name": "tab11",
+                    "path": "/public/dj_interface.html",
+                    "className": [
+                        "tab11"
+                    ],
+                    "document": {
+                        "changed": false,
+                        "meta": {
+                            "timestamp": 1468676298305
+                        },
+                        "filter": true,
+                        "title": "dj_interface.html",
+                        "tooltip": "/public/dj_interface.html",
+                        "ace": {}
+                    },
+                    "editorType": "ace",
+                    "active": false
+                },
+                {
+                    "type": "tab",
+                    "name": "tab12",
+                    "path": "/package.json",
+                    "className": [
+                        "tab12",
+                        "focus"
+                    ],
+                    "document": {
+                        "changed": false,
+                        "meta": {
+                            "timestamp": 1468674958707
+                        },
+                        "filter": true,
+                        "title": "package.json",
+                        "tooltip": "/package.json",
+                        "ace": {}
+                    },
+                    "editorType": "ace",
+                    "active": true
+                }
+            ],
+            "skin": "editor_tab",
+            "skinset": "default",
+            "type": "pane"
+        }
+    },
+    "tree_selection": {
+        "json()": [
+            "/iheartradioapi.js"
+        ]
+    }
+}

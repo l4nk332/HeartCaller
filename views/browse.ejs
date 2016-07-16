@@ -6,8 +6,8 @@
     <title>At&amp;t Hackathon Listener Page</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
 
@@ -28,51 +28,29 @@
     <!-- Top-down modal end -->
 
   	<div class="iheart-radio-logo">
-  		<img class="wide-logo" src="http://img.ccrd.clearchannel.com/media/mlib/977/2015/12/default/iheartradio_logo_05_nobg_0_1449143668.png">
-  		<img class="narrow-logo" src="http://www.strata-gee.com/wp-content/uploads/2015/07/iHeartRadio_Logo-RS.png">
-  	</div>
+      <img class="wide-logo" src="/assets/images/iheartradio_logo_wide.png">
+      <img class="narrow-logo" src="/assets/images/iheartradio_logo_mobile.png">
+    </div>
   	<hr class="logo-divider">
   	<div class="station-container">
-  		<div class="station">
-        <!-- id="show-player" -->
-  			<img src="http://radioedit.iheart.com/service/img/nop()/assets/images/305.png">
-  		</div>
-  		<div class="station">
-        <!-- id="show-alert" -->
-  			<img src="http://radioedit.iheart.com/service/img/nop()/assets/images/c1e17de2-0b5b-4e55-92e5-a14fae7f145f.png">
-  		</div>
-  		<div class="station">
-  			<img src="http://radioedit.iheart.com/service/img/nop()/new_assets/3ab68014-5420-4ab6-879f-78d9a77ccb4d">
-  		</div>
-  		<div class="station">
-  			<img src="http://radioedit.iheart.com/service/img/nop()/new_assets/dce6c927-3e3a-488d-b015-14ab0be25296">
-  		</div>
-  		<div class="station">
-  			<img src="http://radioedit.iheart.com/service/img/nop()/assets/images/5530.png">
-  		</div>
-  		<div class="station">
-  			<img src="http://radioedit.iheart.com/service/img/nop()/new_assets/b9c30b33-262b-4e3d-b5d7-1174013d008b">
-  		</div>
-  		<div class="station">
-  			<img src="http://radioedit.iheart.com/service/img/nop()/assets/images/5529.png">
-  		</div>
-  		<div class="station">
-  			<img src="http://radioedit.iheart.com/service/img/nop()/assets/images/5224.png">
-  		</div>
-  		<div class="station">
-  			<img src="http://radioedit.iheart.com/service/img/nop()/assets/images/bcc428ab-796f-466d-80ba-e41970b3ac40.png">
-  		</div>
+      <% stations.forEach(function(station){ %>
+    		<div class="station" data-id="<%= station.id %>">
+    			<img src="<%= station.logo %>">
+    		</div>
+      <% }) %>
   	</div>
 
     <!-- Bottom-up modal start -->
     <div class="hide-player fixed-bottom">
       <div class="player-container">
         <div class="player-element song-art">
-          <img src="http://radioedit.iheart.com/service/img/nop()/new_assets/dce6c927-3e3a-488d-b015-14ab0be25296" />
+          <img class="player-img"/>
         </div>
         <div class="player-element song-info">
-          <p class="song-title">Colby O'Donis</p>
-          <p class="song-artist">What You Got (feat. Akaon)</p>
+          <p class="station-name"></p>
+          <p class="station-freq"></p>
+          <p class="no-stream" hidden>Stream is temporarily unavailable</p>
+
         </div>
         <div class="player-element player-controls">
           <div class="player-control"><span class="control-backward glyphicon glyphicon-backward" aria-hidden="true"></span></div>
@@ -82,9 +60,14 @@
       </div>
     </div>
     <!-- Bottom-up modal end -->
-
+    <audio controls="controls" class="aud" hidden>
+        Your browser does not support the <code>audio</code> element.
+      <source class="audio-source" type="application/x-mpegURL">
+    </audio>
     <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+    <script src='https://cdn.socket.io/socket.io-1.2.0.js'></script>
     <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
-    <script src="js/index.js"></script>
+    <script src="/js/index.js"></script>
+    <script src="/js/listenersockets.js"></script>
   </body>
 </html>
