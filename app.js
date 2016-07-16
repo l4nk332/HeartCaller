@@ -15,7 +15,7 @@ var app = express();
 var server = require('http').Server(app);
 var io = require('socket.io')(server);
 
-server.listen(8080);
+server.listen(9090);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -32,7 +32,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/live', live);
 app.get('/dj_interface', function(req, res) {
-  res.sendFile(path.join(__dirname + "/public/dj_interface.html"));
+  res.render(path.join("dj_interface"));
 });
 
 app.get('/browse', function(req, res) {

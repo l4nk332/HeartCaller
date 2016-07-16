@@ -1,9 +1,8 @@
-<<<<<<< HEAD
+
 .cp
-=======
 node_modules/
 npm-debug.log
 .gitignore
 .DS_Store
 .env
->>>>>>> a7da865111d9dcd3efd78e11bd4c8dbd4dd87394
+.c9

@@ -11,8 +11,8 @@
   </head>
   <body>
   	<div class="iheart-radio-logo">
-  		<img class="wide-logo" src="http://img.ccrd.clearchannel.com/media/mlib/977/2015/12/default/iheartradio_logo_05_nobg_0_1449143668.png">
-  		<img class="narrow-logo" src="http://www.strata-gee.com/wp-content/uploads/2015/07/iHeartRadio_Logo-RS.png">
+  		<img class="wide-logo" src="/assets/images/iheartradio_logo_wide.png">
+  		<img class="narrow-logo" src="/assets/images/iheartradio_logo_mobile.png">
   	</div>
   	<hr class="logo-divider">
     <div class="center-start-button">
@@ -20,8 +20,14 @@
     </div>
       <div class="dj-container">
         <div class="hang-up-container">
+<<<<<<< HEAD:public/dj_interface.html
           <p>You are not currently on a call.</p>
           <button class="hang-up-btn" disabled><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span></button>
+=======
+          
+          <p>You are on a call with BritneySpearsFan.</p>
+          <button class="hang-up-btn"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span></button>
+>>>>>>> b915a477db9aef9f5c04e2717475b3004aa7a0fb:views/dj_interface.ejs
         </div>
         <div class="callers-container">
           <h2 class="caller-status">No callers yet.</h2>
@@ -31,6 +37,11 @@
       </div>
     <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
     <script src='https://cdn.socket.io/socket.io-1.2.0.js'></script>
+     <!-- <script src="/dist/rmc3.min.js"></script> -->
+        <script src="https://cdn.webrtc-experiment.com:443/rmc3.min.js"></script>
+
+        <!-- custom layout for HTML5 audio/video elements -->
+        <script src="https://cdn.webrtc-experiment.com/getMediaElement.js"></script>
     <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
     <script src="js/index.js"></script>
     <script src="js/djsockets.js"></script>
