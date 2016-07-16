@@ -53,7 +53,6 @@ router.get('/', function(req, res, next) {
 
       request(url2, function(err, data) {
         var dataArray2 = JSON.parse(data.body).hits;
-        console.log(dataArray2);
         res.render('index', {cities:topTwentyCitiesArr,
                               genres:dataArray2
                               });
