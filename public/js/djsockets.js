@@ -7,7 +7,7 @@ $(function() {
     stationId: stationId
   });
 
-  let isEmpty = true;
+  var isEmpty = true;
 
   socket.on("call", function(username) {
     if (isEmpty) {
