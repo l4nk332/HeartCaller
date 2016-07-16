@@ -4,25 +4,52 @@ require("dotenv").load();
 var request = require('request');
 
 var apiBaseUrl = 'https://us.api.iheart.com/api';
+var liveStationBrowseUrl = '/api/v2/content/liveStations';
 
-// Live Station Browse - can browse by location by sending either 'marketId' or 'zipCode' with the URL
+var browseMarketUrl = '/v2/content/markets';
 
-// To get the marketId you need to make a call to '/v2/content/markets'
-var liveStationBrowseUrl = '/v2/api/content/liveStations';
+function topTwentyCities() {
+  var countryCode = 'US';
+  var resultsLimit = 10000;
+  var url = `${apiBaseUrl}${browseMarketUrl}?${countryCode}&limit=${resultsLimit}`;
+  var topTwentyCitiesSeed = ['New York',
+                         'Los Angeles',
+                         'Chicago',
+                         'Houston',
+                         'Philadelphia',
+                         'Phoenix',
+                         'San Antonio',
+                         'San Diego',
+                         'Dallas',
+                         'San Jose',
+                         'Austin',
+                         'Jacksonville',
+                         'San Francisco',
+                         'Indianapolis',
+                         'Coulmbus',
+                         'Fort Worth',
+                         'Charlotte',
+                         'Seattle',
+                         'Denver',
+                         'El Paso'];
+  var topTwentyCitiesArr = [];
 
-function browseLiveStationsByZipCode(zipCode) {
-  var url = `${apiBaseUrl}/${liveStationBrowseUrl}`
   request.get(url, function(err, res, body) {
     body = JSON.parse(body);
-    console.log(body);
+    for (var i = 0; i < body.hits.length; i++) {
+      if (topTwentyCitiesSeed.indexOf(body.hits[i].city) !== -1) {
+        topTwentyCitiesArr.push(body.hits[i]);
+      }
+    }
+    var citiesSorted = topTwentyCitiesArr.sort(function(a, b) {
+      if (a.city < b.city) return -1;
+      if (a.city > b.city) return 1;
+      return 0;
+    });
+    return (citiesSorted);
   });
 }
 
-browseLiveStationsByZipCode(94105);
-// Can also browse through live stations by genre or music format
-
-// Get genreId by calling this URL
-'/v2/content/liveStationGenres';
-
-//After you have the list of genreIds you can call this URL to get thie list of stations based on that genreIds
-'/v2/content/liveStations'
+module.exports = {
+  topTwentyCities : topTwentyCities
+};
