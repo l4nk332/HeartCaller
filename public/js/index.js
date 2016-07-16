@@ -1,3 +1,7 @@
+String.prototype.splice = function(idx, rem, str) {
+    return this.slice(0, idx) + str + this.slice(idx + Math.abs(rem));
+};
+
 $(".station").on("click", function() {
   $(".fixed-bottom").removeClass("hide-player");
   var stationID = ($(this).attr('data-id'));
@@ -12,7 +16,8 @@ $(".station").on("click", function() {
       } else {
         $('.station-freq').html(`${station.freq} ${station.band}`);
       }
-      $('.player-img').attr('src', `${station.logo}`);
+      var logo = station.logo.splice(4,0,'s');
+      $('.player-img').attr('src', `${logo}`);
       $(".control-play").removeClass("glyphicon-play").addClass("glyphicon-pause");
       var streams = station.streams;
       var streamArray = [];
