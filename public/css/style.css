@@ -280,12 +280,12 @@ hr {
   width: 60%;
 }
 
-.song-title, .song-artist {
+.station-name, .station-freq {
   font-weight: bold;
   text-align: center;
 }
 
-.song-title {
+.station-name {
   margin-top: 12px;
 }
 
