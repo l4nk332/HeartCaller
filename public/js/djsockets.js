@@ -1,7 +1,7 @@
 $(function() {
-  let stationId = prompt("Please enter your station ID");
-
+  var stationId = prompt("Please enter your station ID");
   var socket = io();
+  var acceptingCalls = false;
 
   socket.emit("dj-join", {
     stationId: stationId
@@ -12,8 +12,15 @@ $(function() {
   });
 
   $(".start-btn").on("click", function() {
-    socket.emit("line-open", {
-      stationId: stationId
-    });
+    if (!acceptingCalls) {
+      socket.emit("line-open", {
+        stationId: stationId
+      });
+    } else {
+      socket.emit("line-close", {
+        stationId: stationId
+      });
+    }
+    acceptingCalls = !acceptingCalls;
   });
 });

@@ -36,7 +36,8 @@ app.get('/dj_interface', function(req, res) {
 });
 
 app.get('/browse', function(req, res) {
-  res.sendFile(path.join(__dirname + "/public/browse.html"));
+  res.render('browse');
+  // res.sendFile(path.join(__dirname + "/public/browse.html"));
 });
 
 let stations = {};
@@ -62,6 +63,15 @@ io.on('connection', function(socket) {
       if (listeners[socketId] === data.stationId) {
         console.log(socketId);
         io.to(socketId).emit("line-open");
+      }
+    }
+  });
+
+  socket.on("line-close", function(data) {
+    for (let socketId in listeners) {
+      if (listeners[socketId] === data.stationId) {
+        console.log(socketId);
+        io.to(socketId).emit("line-close");
       }
     }
   });
