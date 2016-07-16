@@ -2,6 +2,7 @@
 var express = require('express');
 var router = express.Router();
 var request = require('request');
+var splice = require('../lib/helper.js');
 
 /* GET home page. */
 router.get('/genre/:id', function(req, res, next) {
@@ -24,14 +25,14 @@ router.get('/genre/:id', function(req, res, next) {
       } else {
         obj.location = `${key.markets[0].city}, ${key.markets[0].stateAbbreviation}`;
       }
-      obj.logo = key.logo;
+      obj.logo = key.logo.splice(4,0,'s');
       obj.website = key.website;
       obj.stream = key.streams.hls_stream;
       if (obj.website) {
         if (obj.website.indexOf('www') > -1) {
-          obj.website = "http://" + obj.website;
+          obj.website = "https://" + obj.website;
         } else {
-          obj.website = "http://www." + obj.website;
+          obj.website = "https://www." + obj.website;
         }
       }
       newArray.push(obj);
@@ -64,7 +65,8 @@ router.get('/city/:id', function(req, res, next) {
       } else {
         obj.location = `${key.markets[0].city}, ${key.markets[0].stateAbbreviation}`;
       }
-      obj.logo = key.logo;
+
+      obj.logo = key.logo.splice(4,0,'s');
       obj.website = key.website;
       obj.stream = key.streams.hls_stream;
       if (obj.website) {
