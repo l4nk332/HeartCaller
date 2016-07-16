@@ -12,6 +12,8 @@ $(".station").on("click", function() {
       } else {
         $('.station-freq').html(`${station.freq} ${station.band}`);
       }
+      $('.player-img').attr('src', `${station.logo}`);
+      $(".control-play").removeClass("glyphicon-play").addClass("glyphicon-pause");
       var streams = station.streams;
       var streamArray = [];
       for (var keys in streams) {
