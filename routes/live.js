@@ -12,14 +12,18 @@ router.get('/genre/:id', function(req, res, next) {
     for (let i = 0; i < dataArray.length; i++) {
       let obj = {};
       let key = dataArray[i];
+      obj.id = key.id;
       obj.name = key.name;
       obj.freq = key.freq;
       obj.band = key.band;
       obj.callLetters = key.callLetters;
       obj.description = key.description;
       obj.genre = key.genres[0].name;
-      obj.city = key.markets[0].city;
-      obj.state = key.markets[0].stateAbbreviation;
+      if(key.markets[0].city === 'Digital') {
+        obj.location = 'Online Radio';
+      } else {
+        obj.location = `${key.markets[0].city}, ${key.markets[0].stateAbbreviation}`;
+      }
       obj.logo = key.logo;
       obj.website = key.website;
       obj.stream = key.streams.hls_stream;
@@ -32,7 +36,7 @@ router.get('/genre/:id', function(req, res, next) {
       }
       newArray.push(obj);
     }
-    res.send(dataArray);
+    res.send(newArray);
   });
 });
 
@@ -44,6 +48,7 @@ router.get('/city/:id', function(req, res, next) {
     for (let i = 0; i < dataArray.length; i++) {
       let obj = {};
       let key = dataArray[i];
+      obj.id = key.id;
       obj.name = key.name;
       obj.freq = key.freq;
       obj.band = key.band;
@@ -54,8 +59,11 @@ router.get('/city/:id', function(req, res, next) {
         allGenres.push(key.genres[j].name);
       }
       obj.genres = allGenres;
-      obj.city = key.markets[0].city;
-      obj.state = key.markets[0].stateAbbreviation;
+      if(key.markets[0].city === 'Digital') {
+        obj.location = 'Online Radio';
+      } else {
+        obj.location = `${key.markets[0].city}, ${key.markets[0].stateAbbreviation}`;
+      }
       obj.logo = key.logo;
       obj.website = key.website;
       obj.stream = key.streams.hls_stream;
