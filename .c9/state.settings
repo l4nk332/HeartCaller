@@ -41,8 +41,7 @@
                     "name": "tab1",
                     "path": "",
                     "className": [
-                        "tab1",
-                        "focus"
+                        "tab1"
                     ],
                     "document": {
                         "changed": false,
@@ -55,7 +54,7 @@
                         "terminal": {
                             "id": "devel_828",
                             "cwd": "",
-                            "width": 1487,
+                            "width": 1631,
                             "height": 342
                         }
                     },
@@ -99,16 +98,16 @@
             "@ace": 1,
             "@acestatus": 1,
             "@divider": 4,
-            "@document": 44,
+            "@document": 6,
             "@form": 5,
             "@menu": 5,
             "@menuitem": 13,
             "@pane": 2,
             "@postmessage": 1,
             "@preview": 1,
-            "@session": 43,
-            "@tab": 26,
-            "@undoManager": 44,
+            "@session": 5,
+            "@tab": 6,
+            "@undoManager": 6,
             "@welcome": 1
         }
     },
@@ -127,12 +126,13 @@
     },
     "panecycle": {
         "json()": [
+            "tab5",
             "tab1"
         ]
     },
     "panels": {
         "@active-left": "tree",
-        "@width-left": 361,
+        "@width-left": 217,
         "commands.panel": {
             "@enabled": "true",
             "@name": "commands.panel"
@@ -164,16 +164,8 @@
         "expanded": {
             "json()": [
                 "/",
-                "/ewebrtc-dhs-restify/public/js/docs/public",
-                "/ewebrtc-dhs-restify/public",
-                "/ewebrtc-dhs-restify/public/js/docs",
-                "/ewebrtc-dhs-restify/public/js",
-                "/ewebrtc-sdk",
-                "/ewebrtc-sdk/node-sample/node_modules/att-dhs/js",
-                "/ewebrtc-sdk/node-sample",
-                "/ewebrtc-sdk/node-sample/public",
-                "/ewebrtc-sdk/node-sample/public/js",
-                "/ewebrtc-sdk/node-sample/public/js/vendor"
+                "/routes",
+                "/views"
             ]
         }
     },
@@ -206,15 +198,99 @@
     },
     "tabs": {
         "json()": {
-            "focus": "tab1",
+            "focus": "/views/error.ejs",
             "meta": {
                 "accessList": [
-                    "tab23",
-                    "tab22"
+                    "tab5",
+                    "tab4",
+                    "tab0",
+                    "tab3"
                 ]
             },
             "name": "pane0",
-            "nodes": [],
+            "nodes": [
+                {
+                    "type": "tab",
+                    "name": "tab0",
+                    "path": "/app.js",
+                    "className": [
+                        "tab0"
+                    ],
+                    "document": {
+                        "changed": false,
+                        "meta": {
+                            "timestamp": 1468670323807
+                        },
+                        "filter": true,
+                        "title": "app.js",
+                        "tooltip": "/app.js",
+                        "ace": {}
+                    },
+                    "editorType": "ace",
+                    "active": false
+                },
+                {
+                    "type": "tab",
+                    "name": "tab3",
+                    "path": "/routes/live.js",
+                    "className": [
+                        "tab3"
+                    ],
+                    "document": {
+                        "changed": false,
+                        "meta": {
+                            "timestamp": 1468670581372
+                        },
+                        "filter": true,
+                        "title": "live.js",
+                        "tooltip": "/routes/live.js",
+                        "ace": {}
+                    },
+                    "editorType": "ace",
+                    "active": false
+                },
+                {
+                    "type": "tab",
+                    "name": "tab4",
+                    "path": "/views/index.ejs",
+                    "className": [
+                        "tab4"
+                    ],
+                    "document": {
+                        "changed": false,
+                        "meta": {
+                            "timestamp": 1468670323811
+                        },
+                        "filter": true,
+                        "title": "index.ejs",
+                        "tooltip": "/views/index.ejs",
+                        "ace": {}
+                    },
+                    "editorType": "ace",
+                    "active": false
+                },
+                {
+                    "type": "tab",
+                    "name": "tab5",
+                    "path": "/views/error.ejs",
+                    "className": [
+                        "tab5",
+                        "focus"
+                    ],
+                    "document": {
+                        "changed": false,
+                        "meta": {
+                            "timestamp": 1468670323811
+                        },
+                        "filter": true,
+                        "title": "error.ejs",
+                        "tooltip": "/views/error.ejs",
+                        "ace": {}
+                    },
+                    "editorType": "ace",
+                    "active": true
+                }
+            ],
             "skin": "editor_tab",
             "skinset": "default",
             "type": "pane"
@@ -222,7 +298,7 @@
     },
     "tree_selection": {
         "json()": [
-            "/app.js"
+            "/views"
         ]
     }
 }
