@@ -46,8 +46,18 @@ router.get('/', function(req, res, next) {
         if (a.city > b.city) return 1;
         return 0;
       });
-    res.render('index', {cities:citiesSorted});
+      var liveStationGenreUrl = '/v2/content/liveStationGenres';
+      var countryCode2 = 'US';
+      var limit2 = 10000;
+      var url2 = `${apiBaseUrl}${liveStationGenreUrl}?$countryCode=${countryCode}&limit=${limit2}`;
+
+      request(url2, function(err, data) {
+        var dataArray2 = JSON.parse(data.body).hits;
+        res.render('index', {cities:topTwentyCitiesArr,
+                              genres:dataArray2
+                              });
     // res.send('hello')
+    });
   });
 });
 
