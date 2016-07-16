@@ -6,10 +6,6 @@ $(".dismiss-alert").on("click", function() {
   $(".fixed-top").toggleClass("hide-alert");
 });
 
-$(".iheart-radio-logo").on("click", function() {
-  $(".fixed-top").toggleClass("hide-alert");
-});
-
 $(".play-btn").on("click", function() {
   if ($(".control-play").hasClass("glyphicon-play")) {
     $(".control-play").removeClass("glyphicon-play").addClass("glyphicon-pause");
