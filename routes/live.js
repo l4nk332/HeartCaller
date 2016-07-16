@@ -6,7 +6,7 @@ var request = require('request');
 /* GET home page. */
 router.get('/genre/:id', function(req, res, next) {
   var id = req.params.id;
-  request(`https://us.api.iheart.com/api/v2/content/liveStations?countryCode=US&limit=100&genreId=${id}`, function(err,data) {
+  request(`https://us.api.iheart.com/api/v2/content/liveStations?countryCode=US&limit=10&genreId=${id}`, function(err,data) {
     var dataArray = JSON.parse(data.body).hits;
     var newArray = [];
     for (let i = 0; i < dataArray.length; i++) {
@@ -36,13 +36,13 @@ router.get('/genre/:id', function(req, res, next) {
       }
       newArray.push(obj);
     }
-    res.send(newArray);
+    res.render('browse', {stations:newArray});
   });
 });
 
 router.get('/city/:id', function(req, res, next) {
   var id = req.params.id;
-  request(`https://us.api.iheart.com/api/v2/content/liveStations?countryCode=US&limit=100&marketId=${id}`, function(err,data) {
+  request(`https://us.api.iheart.com/api/v2/content/liveStations?countryCode=US&limit=10&marketId=${id}`, function(err,data) {
     var dataArray = JSON.parse(data.body).hits;
     var newArray = [];
     for (let i = 0; i < dataArray.length; i++) {
@@ -76,7 +76,7 @@ router.get('/city/:id', function(req, res, next) {
       }
       newArray.push(obj);
     }
-    res.send(newArray);
+    res.render('browse', {stations:newArray});
   });
 });
 
