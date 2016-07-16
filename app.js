@@ -32,7 +32,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/live', live);
 app.get('/dj_interface', function(req, res) {
-  res.sendFile(path.join(__dirname + "/public/dj_interface.html"));
+  res.render(path.join("dj_interface"));
 });
 
 app.get('/browse', function(req, res) {
