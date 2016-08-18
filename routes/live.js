@@ -43,7 +43,8 @@ router.get('/genre/:id', function(req, res, next) {
 
 router.get('/city/:id', function(req, res, next) {
   var id = req.params.id;
-  request(`https://us.api.iheart.com/api/v2/content/liveStations?countryCode=US&limit=10&marketId=${id}`, function(err,data) {
+  var page = parseInt(req.query.startIndex + '0') || 1;
+  request(`https://us.api.iheart.com/api/v2/content/liveStations?countryCode=US&limit=10&marketId=${id}&startIndex=${page}`, function(err,data) {
     var dataArray = JSON.parse(data.body).hits;
     var newArray = [];
     for (let i = 0; i < dataArray.length; i++) {
@@ -78,7 +79,7 @@ router.get('/city/:id', function(req, res, next) {
       }
       newArray.push(obj);
     }
-    res.render('browse', {stations:newArray});
+    res.render('browse', {stations:newArray, page:page});
   });
 });
 
